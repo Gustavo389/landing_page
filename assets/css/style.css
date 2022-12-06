@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&family=Anton&display=swap");
 body {
   margin: 0;
   padding: 0;
   position: relative;
 }
 header {
-  z-index: 2;
+  z-index: 3;
   display: flex;
   position: fixed;
   flex-direction: row;
@@ -27,9 +29,8 @@ header {
 }
 
 .font_logo {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  font-weight: bold;
+  font-family: "Anton", sans-serif;
+  color: #edf6f9;
   font-size: 20px;
 }
 
@@ -42,20 +43,25 @@ header {
 }
 .font_li {
   display: inline-block;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-family: "Antic Slab", sans-serif;
   font-weight: bold;
+  margin-left: 10px;
 }
 .font_li a {
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  color: white;
+  padding: 5px;
+  font-weight: normal;
+  font-family: "Antic Slab", sans-serif;
   text-decoration: none;
-  transition: ease-in-out 0.5s;
+  border-radius: 8px;
+
+  transition: cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s;
 }
 .font_li a:hover {
   color: white;
-  background-color: rgb(27, 122, 191);
+  background-color: #e29578;
+  border: #edf6f9 solid 2px;
 }
 .banner {
   align-items: center;
@@ -63,17 +69,33 @@ header {
   display: flex;
   top: 0;
   z-index: 1;
+  width: 100%;
+  height: 800px;
   flex-direction: row;
 }
 #banner_img {
   width: 100%;
-  height: auto;
-  opacity: 0.9;
+  height: 100%;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
 }
 .black_courtain {
   width: 100%;
-  height: auto;
-  background-color: black;
+  height: 100%;
+  /* background: rgb(23, 39, 116);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 39, 116, 1) 0%,
+    rgba(25, 111, 97, 1) 100%
+  ); */
+  background: rgb(0, 109, 119);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 109, 119, 1) 0%,
+    rgba(131, 197, 190, 1) 100%
+  );
   position: relative;
 }
 .banner_div {
@@ -87,40 +109,99 @@ header {
 }
 .inf_container {
   margin: 0px 20px 0px 20px;
+  color: white;
+  font-family: "Anton";
+  height: fit-content;
+  text-align: right;
+}
+.inf_container h1,
+p {
+  font-family: "Antic Slab", serif;
+  font-weight: normal;
 }
 .form_reg {
-  background-color: white;
-  height: auto;
+  background-color: #edf6f9;
+  height: 374px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   width: 400px;
   display: flex;
+  top: 0;
+
+  z-index: 4;
+  position: absolute;
+  right: 0;
   margin-right: 20px;
+  margin-top: 100px;
   flex-direction: column;
   border-radius: 5px;
-  font-family: Arial, Helvetica, sans-serif;
   color: black;
   font-size: 15px;
   padding: 30px;
-
 }
 .inp_reg {
   margin: 0px 20px 0px 20px;
   color: grey;
 }
-#Form_font{
+#Form_font {
   color: grey;
+  font-family: "Anton", "Courier New", Courier, monospace;
+  font-weight: normal;
   margin: auto;
 }
-.button_form{
+.button_form {
   width: fit-content;
-  padding: 20px;
+  padding: 10px;
   margin: auto;
   margin-top: 20px;
   color: grey;
-  background-color: ;
+  font-family: "Anton", "Courier New", Courier, monospace;
+  text-align: end;
+  border: grey 2px solid;
+  border-radius: 10px;
+  text-decoration: none;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.13, 1.06);
 }
-/* --iceberg: #66ABDAff;
---black: #000000ff;
---spanish-blue: #1370B3ff;
---black-2: #000000ff;
---black-3: #000000ff;
---black-4: #000000ff; */
+
+.button_form:hover {
+  background-color: #e29578;
+  color: #edf6f9;
+  border: #e29578;
+}
+
+.division {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  display: flex;
+}
+#svg_drop {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+.about_us {
+  background-color: #edf6f9;
+  height: 1000px;
+  width: 100%;
+}
+.btt_highlight {
+  text-align: end;
+
+  border: #edf6f9 2px solid;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  color: #edf6f9;
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.13, 1.06);
+  margin: auto;
+  align-self: center;
+}
+.btt_highlight:hover {
+  background-color: #e29578;
+}
